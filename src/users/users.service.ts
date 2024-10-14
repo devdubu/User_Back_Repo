@@ -4,7 +4,6 @@ import { UserEntity } from "./entities/user.entity";
 import { DataSource, Repository } from "typeorm";
 import { AuthService } from "src/auth/auth.service";
 import {
-  Injectable,
   InternalServerErrorException,
   NotFoundException,
   UnprocessableEntityException,

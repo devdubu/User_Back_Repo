@@ -24,6 +24,8 @@ export class UsersController {
     @Headers() headers: any,
     @Param("id") UserId: string
   ): Promise<IUser> {
+    const jwtString = headers.authorization.split('Bearer ')[1];
+    this.authService.verfiy(jwtString);
     return this.usersServie.getUserInfo(UserId);
   }
 }
